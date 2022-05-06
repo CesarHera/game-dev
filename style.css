@@ -1,0 +1,784 @@
+:root {
+    --white: #eee;
+    --black: #000;
+    --dark: rgb(24, 24, 24);
+    --emphasis: #24d0c7;
+}
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+html {
+    font-size: 62.5%;
+    background-color: var(--dark);
+    
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.6rem;
+}
+
+.header-container {
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp7353918.jpg&f=1&nofb=1');
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    display: grid;
+    grid-template: auto 700px / 135px 539px;
+    justify-content: space-between;
+
+    margin: auto;
+    padding: 0 50px;
+    max-width: 1400px;
+}
+
+.header__logo-container {
+    padding: 6px 20px 10px;
+
+    background-color: rgb(36, 208, 199);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 2px 2px 20px #24d0c711;
+
+    
+}
+
+.header__logo-container h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+
+    line-height: 3.8rem;
+    text-align: center;
+    color: var(--black);
+}
+
+.header__nav__ul {
+    display: flex;
+
+    background-color: var(--dark);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 2px 2px 20px #24d0c711;
+
+    list-style: none;
+
+    overflow: hidden;
+}
+
+.header__nav__burger-menu--open {
+    display: none;
+}
+.header__nav__burger-menu--close {
+    display: none;
+}
+.header__nav__ul--mobile {
+    display: none;
+}
+
+.header__nav__ul a {
+    display: inline-block;
+    
+    padding: 17px 30px 20px;
+
+    color: var(--white);
+
+    transition: background-color .2s, color .2s;
+}
+
+.header__nav__ul a:hover {
+    background-color: var(--emphasis);
+
+    color: var(--black);
+}
+
+.header__hero {
+    grid-area: 2 / 1 / 3 / 3;
+    place-self: center start;
+
+    margin-bottom: 80px; 
+
+    color: #f2ecef;
+}
+
+.header__hero__container__title {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+    font-size: 8rem;
+}
+
+.header__hero__container__phrase {
+    margin: 10px 0 40px;
+    
+    font-size: 2.4rem;
+
+    color: #f2ecefdd;
+}
+
+.header__hero__container__download__container--apple, .header__hero__container__download__container--android {
+    display: inline-block;
+
+    height: 43px;
+}
+
+.header__hero__container__download__container--apple {
+    margin-right: 15px;
+}
+
+.header__hero__container__download__container--apple img {
+    height: 100%;
+    
+    border: 1px solid #f2ecef22;
+    border-radius: 8px;
+}
+
+.header__hero__container__download__container--android img {
+    height: 99%;
+    
+    border: 1px solid #f2ecef66;
+    border-radius: 8px;
+}
+
+.main__featured-games {
+    display: grid;
+    justify-content: center;
+    grid-template: 300px / repeat(auto-fit, minmax(auto, 250px));
+    grid-auto-rows: 300px;
+    grid-gap: 50px;
+
+    max-width: 1300px;
+    margin: -80px auto 0;
+}
+
+.main__featured-game {
+    position: relative;
+
+    background-size: 100%;
+    border-radius: 24px;
+    
+    overflow: hidden;
+    
+    color: var(--black);
+
+    transition: background-size .2s;
+}
+.main__featured-game:hover {
+    background-size: 110%;
+}
+
+.main__featured-game:hover .main__featured-game__gradient {
+    opacity: 0;
+}
+
+.main__featured-game--spellbreak {
+    background-image: url('https://cdn1.epicgames.com/offer/newt/0ef45910-9a15-4507-a415-3580d043ef1b_1200x1600-ce05663204f881d3999a4b6529405d2b?h=854&resize=1&w=640');
+    background-position: center top;
+}
+
+.main__featured-game--such-art {
+    background-image: url('https://cdn1.epicgames.com/salesEvent/salesEvent/portrait-product-cs_1200x1600-5c794aa451f846ba01786a36aacfc828?h=854&resize=1&w=640');
+    background-position: center bottom;
+}
+
+.main__featured-game--trackmania {
+    background-image: url('https://cdn1.epicgames.com/salesEvent/salesEvent/Trackmania_Royal_KeyArt_1200x1600_1200x1600-baf0e1c64be7ae2fefa18ba9e845f4c2?h=854&resize=1&w=640');
+    background-position: center top;
+}
+
+.main__featured-game--explore {
+    background-color: #7472ff;
+}
+
+.main__featured-game__gradient {
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: end;
+
+    padding: 30px;
+    height: 100%;
+    width: 100%;
+    
+    background-image: linear-gradient(transparent, transparent, var(--emphasis));
+
+    transition: opacity .2s;
+}
+
+.main__featured-game__description-wraper {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    transition: transform .2s;
+}
+.main__featured-game__description-wraper:hover {
+    transform: scale(1.15);
+}
+
+.main__featured-game--explore .main__featured-game__description {
+    font-size: 2.4rem;
+    font-weight: bold;
+    
+    text-align: center;
+}
+
+.main__featured-game--explore i {
+    font-size: 2.3rem;
+}
+
+.main__featured-game--explore .main__featured-game__gradient {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main__about {
+    margin: 180px auto 100px;
+    padding: 0 30px;
+    max-width: 660px;
+
+    color: var(--white);
+
+    text-align: center;
+}
+
+.main__about__subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.main__about__title {
+    margin: 10px 0 30px;
+    
+    font-size: 5rem;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.description {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+
+    color: var(--white);
+}
+
+.main__about__button {
+    display: inline-block;
+
+    margin-top: 50px;
+    padding: 12px 39px 16px;
+    
+    border: 2px solid var(--emphasis);
+    border-radius: 28px;
+    
+    color: var(--white);
+
+    transition: background-color .2s, color .2s;
+}
+.main__about__button:hover {
+    background-color: var(--emphasis);
+
+    color: var(--black);
+}
+
+.main__working {
+    position: relative;
+    display: flex;
+
+    justify-content: center;
+
+    margin: auto;
+    max-width: 760px;
+    padding: 0 20px;
+}
+
+.main__working__cover {
+    position: relative;
+
+    width: 90%;
+
+    border-radius: 35px;
+
+    overflow: hidden;
+}
+
+.main__working__cover img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.main__working__cover__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-image: linear-gradient(transparent, transparent, var(--emphasis));
+    opacity: 0;
+    
+    transition: opacity .2s;
+}
+.main__working__cover__overlay:hover {
+    opacity: .2;
+}
+
+.main__working img:last-child {
+    position: absolute;
+
+    width: 24%;
+
+    bottom: -60px;
+    left: 0;
+}
+
+.main__our-games {
+    padding: 0 30px;
+    margin: 200px auto 150px;
+    max-width: 490px;
+
+    text-align: center;
+}
+
+.main__our-games__title {
+    margin-bottom: 20px;
+
+    font-family: 'Exo 2', sans-serif;;
+    font-size: 4rem;
+
+    color: var(--white);
+}
+
+.main__games-description {
+    display: grid;
+
+    grid-template: 1fr 1fr / repeat(auto-fit, minmax(390px, 1fr));
+    grid-auto-rows: 354px;
+    grid-gap: 30px;
+
+    margin: auto;
+    margin-bottom: 200px;
+    padding: 20px;
+    min-height: 1000px;
+    max-width: 1200px;
+
+    background-image: url('https://static.wixstatic.com/media/c837a6_1cf50738638a41d680ed4dc3db5e5492~mv2.png/v1/fill/w_1499,h_1179,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/c837a6_1cf50738638a41d680ed4dc3db5e5492~mv2.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(.9) contrast(1.1) saturate(1.2);
+}
+
+.main__games-description__game {
+    padding: 37px 40px 40px;
+    width: 390px;
+
+    background-color: var(--white);
+    border-radius: 35px;
+
+    color: var(--black);
+}
+
+.main__games-description__game--spellbreak {
+    place-self: start;
+}
+
+.main__games-description__game--such-art {
+    justify-self: end;
+    align-self: start;
+}
+
+.main__games-description__game--trackmania {
+    justify-content: start;
+    align-self: end;
+}
+
+.main__games-description__illustration {
+    padding: 0 70px 40px 0;
+    place-self: end;
+}
+
+.main__games-description__game__head {
+    display: flex;
+    
+    align-items: end;
+    grid-gap: 20px;
+}
+
+.main__games-description__game__head__logo img{
+    width: 80px;  
+    height: 80px;
+    
+    object-fit: cover;
+    object-position: center;
+
+    border: 6px solid var(--white);
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px #0003;
+}
+
+.main__games-description__game__head__details {
+    padding-bottom: 5px;
+}
+
+.main__games-description__game__description {
+    margin: 26px 0 30px;
+}
+
+.main__games-description__game__download {
+    display: flex;
+    grid-gap: 20px;
+}
+
+.main__games-description__game__download img {
+    height: 36px;
+}
+
+.main__join-us {
+    position: relative;
+    
+    padding: 100px 90px 0;
+    height: 700px;
+    width: 100%;
+
+    font-family: 'Exo 2', sans-serif;
+
+}
+
+.main__join-us div {
+    position: relative;
+    
+    margin: auto;
+    height: 100%;
+    max-width: 1400px;
+}
+
+.main__join-us::before {
+    content: '';
+    
+    position: absolute;
+    
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    background-image: url('https://www.psu.com/wp/wp-content/uploads/2020/10/Spellbreak-PS4-Wallpapers-07.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+}
+
+.main__join-us__subtitle {
+    font-size: 3rem;
+
+    color: var(--white);
+    text-shadow: 1px 1px 5px #000;
+}
+
+.main__join-us__title {
+    display: block;
+
+    margin: 10px 0 60px;
+    max-width: 770px;
+    
+    font-size: 6rem;
+    
+    color: var(--white);
+    text-shadow: 1px 1px 5px #000;
+}
+
+.main__join-us__button {
+    display: inline-block;
+
+    padding: 15px 39px 17px;
+
+    background-color: var(--emphasis);
+    border-radius: 28px;
+    
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+    font-size: 1.8rem;
+    
+    color: var(--black);
+    
+    transition: background-color .2s, color .2s;
+}
+.main__join-us__button:hover {
+    background-color: var(--dark);
+    
+    color: var(--white);
+}
+
+.main__join-us__illustration {
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+
+    width: 300px;
+}
+
+.main__contact {
+    position: relative;
+    padding: 300px 50px 170px;
+    
+}
+.main__contact::before {
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: var(--dark);
+    background-image: url('https://static.wixstatic.com/media/c837a6_0d97f82987d44ed49ee37d4150d890a5~mv2.jpg/v1/fill/w_1566,h_910,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_0d97f82987d44ed49ee37d4150d890a5~mv2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(.8) contrast(1.8) grayscale(.6);
+}
+
+.main__contact-wrapper {
+    position: relative;
+    display: flex;
+    
+    justify-content: space-between;
+    grid-gap: 30px;
+
+    margin: auto;
+    max-width: 1100px;
+}
+
+.main__contact__message {
+    margin-top: -403px;
+    padding: 30px;
+    width: 374px;
+    
+    background-color: var(--dark);
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px #0006;
+    
+    color: var(--white);
+}
+
+.main__contact__message__title {
+    font-size: 2.4rem;
+    
+    margin-bottom: 10px;
+}
+
+.main__contact__message__description {
+    font-size: 1.6rem;
+    
+    margin-bottom: 30px;
+}
+
+.main__contact__message label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+    
+    font-size: 1.6rem;
+}
+
+.main__contact__message input {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+
+    outline: none;
+    border: none;
+    border-radius: 15px;
+
+    font-size: 1.6rem;
+}
+
+.main__contact__message__name {
+    display: flex;
+
+    grid-gap: 10px;
+}
+
+.main__contact__message__name__side {
+    width: 50%;
+}
+
+.main__contact__message__submit {
+    margin-top: 20px;
+    padding: 18px;
+    padding-left: 10px;
+    width: 100%;
+
+    background-color: var(--emphasis);
+    border-radius: 15px;
+    border: none;
+    
+    font-size: 1.6rem;
+}
+
+
+.main__contact__newsletter {
+    padding: 30px;
+    
+    background-color: var(--dark);
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px #0006;
+    
+    color: var(--white);
+}
+
+.main__contact__newsletter label {
+    display: inline-block;
+    
+    font-size: 1.65rem;
+    
+    margin-bottom: 15px;
+}
+
+.main__contact__newsletter__title {
+    margin-bottom: 15px;
+    
+    font-size: 2rem;
+}
+
+.main__contact__newsletter__submit {
+    display: flex;
+    
+    grid-gap: 20px;
+}
+
+.main__contact__newsletter__submit input {
+    padding: 10px;
+    
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    
+    font-size: 1.6rem;
+    
+    width: 100%;
+}
+
+.main__contact__newsletter__submit button {
+    padding: 15px 28px;
+    
+    background-color: var(--emphasis);
+    border-radius: 20px;
+    border: none;
+    
+    font-size: 1.6rem;
+}
+
+.footer {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    margin: auto;
+    padding: 0 30px;
+    max-width: 1200px;
+    
+    color: var(--white);
+    text-align: center;
+}
+
+.footer__logo {
+    margin-bottom: 30px;
+    padding: 12px 24px;
+
+    border-radius: 0 0 15px 15px;
+    background-color: var(--emphasis);
+
+    font-family: 'Exo 2', sans-serif;
+    font-weight: bolder;
+
+    color: var(--black);
+}
+
+.footer__slogan {
+    font-size: 2rem;
+
+    opacity: .9;
+}
+
+.footer__links {
+    display: grid;
+
+    grid-template: 1fr / repeat(auto-fit, minmax(1px, 255px));
+    grid-row-gap: 60px;
+    justify-content: center;
+
+    margin: 70px 0;
+    padding: 40px 60px;
+    width: 100%;
+
+    border-top: 1px solid rgb(112, 112, 112);
+    border-bottom: 1px solid rgb(112, 112, 112);
+
+    text-align: left;
+}
+
+.footer__links__side__title {
+    margin-bottom: 15px;
+    
+    font-size: 2rem;
+}
+
+.footer__links__side__list {
+    list-style: none;
+}
+
+.footer__links__side__list li {
+    margin: 10px 0;
+
+    opacity: .9;
+}
+
+.footer__links__side__list__link img {
+    height: 40px;
+
+    outline: 4px solid var(--dark);
+    outline-offset: -2px;
+    border-radius: 8px;
+
+    opacity: 1;
+}
+
+.footer__copyright {
+    margin-bottom: 70px;
+    
+    font-size: 1.5rem;
+
+    opacity: .9;
+}

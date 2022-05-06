@@ -1,0 +1,41 @@
+.main__our-games {
+    margin-bottom: 20px;
+}
+
+.main__games-description {
+    grid-template-columns: 1fr;
+    grid-template-rows: unset;
+    grid-auto-rows: auto;
+    justify-items: center;
+    justify-content: center;
+    grid-gap: 100px;
+
+    padding-top: 580px;
+
+    background-position: top;
+    background-size: 700px;
+}
+
+.main__games-description__game {
+    width: unset;
+    max-width: 390px;
+}
+
+.main__games-description__game--spellbreak {
+    place-self: unset;
+}
+
+.main__games-description__game--such-art {
+    justify-self: unset;
+    align-self: start;
+}
+
+.main__games-description__game--trackmania {
+    justify-content: unset;
+    align-self: unset;
+}
+
+.main__games-description__illustration {
+    padding: 0 70px 40px 0;
+    place-self: unset;
+}
